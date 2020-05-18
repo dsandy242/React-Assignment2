@@ -1,0 +1,31 @@
+.spanStyle{
+    background-color: lightblue;
+    margin: auto;
+    padding: 2px;
+    margin:10px;
+    size: 20%;
+    font-size: larger;
+    border:2px black 20%;
+}
+.deletebtn{
+    background-color: red;
+    border: black 5px round;
+}
+.resetStyle{
+background-color: cadetblue;
+border: darkblue 5px solid;
+border-radius: 3px;
+}
+.navStyle{
+    background-color: darkgray;
+    font-size: larger;
+    height: 100px;
+    width: 100%;
+}
+.div1Style{
+    background-color: darkkhaki;
+}
+.div2Style
+{
+    background-color: darkseagreen;
+}
