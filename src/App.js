@@ -39,3 +39,49 @@ export default App;
 
 
 
+/*class App extends Component {
+  state={
+    counters:[
+        {id:1,value:3},
+        {id:2,value:2},
+        {id:3,value:0},
+        {id:4,value:0}
+        
+    ]
+    };
+    handleIncrement= counter =>{
+        const counters=[...this.state.counters];
+        const index=counters.indexOf(counter);
+        counters[index]={...counter};
+        counters[index].value++;
+        this.setState({counters});
+    
+    }
+  
+    handleReset= () => {
+        const counters=this.state.counters.map(c => {
+            c.value=0 ;
+            return c;
+        });
+        this.setState({counters});
+       };
+    handleDelete = counterId=>{
+    const counters=this.state.counters.filter(c=>c.id!==counterId);
+    this.setState({counters});
+    console.log("hellloooo");
+    }
+  render(){
+  return (<div>
+    <Nav totalCounters={this.state.counters.filter(c=>c.value>0).length}></Nav>
+    <State2 onReset={this.handleReset}
+            counters={this.state.counters}
+            onDelete={this.handleDelete}
+            onIncrement={this.handleIncrement}
+            ></State2>
+    </div>
+  );
+}
+}
+
+export default App;
+*/
