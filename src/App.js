@@ -156,6 +156,7 @@ class App extends Component {
         <HeaderComp key={k} tit={k} value={l} >{global[l]}</HeaderComp>
       )
     })
+    
     return (
       <div>
         {/* <button onClick={this.getCountries}>Getdata</button> */}
