@@ -1,0 +1,17 @@
+.globalStyle{
+    background-color: tomato;
+    text-align: center;
+    border: rgb(212, 58, 212);
+    box-shadow: 0 6px 3px grey;
+    margin: 10px;
+    padding: 0 10px;
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+    height:100%;
+    width:50%;
+}
+.listStyle{
+    border:yellow solid 4px;
+}
