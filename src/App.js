@@ -1,3 +1,105 @@
+import React from "react";
+import ReduxList from "./CountryRedux2/ReduxFinal/ReduxList";
+import ReduxFinal from "./CountryRedux2/ReduxFinal/ReduxFinal";
+
+const App = () => (
+  <>    
+    <div>
+            <ReduxFinal />
+    </div>
+    <div>
+            <ReduxList />
+    </div>
+  </>
+);
+
+export default App;
+
+
+// import React, { Component } from "react";
+// import { connect } from "react-redux";
+// import { getcountry } from "./countryRedux/action";
+// class App extends Component {
+//   state={
+//     countryNames:[],
+//     sss:''
+// }
+ 
+//   componentDidMount() {
+//     this.props.getcountry()
+//  }
+
+//   ChangeHandler=(event)=>{
+//     let country=event.target.value;
+//     console.log("inSide Cahnge Handler")
+//     this.setState({sss:country})
+//     //console.log(this.state.countryName)
+//     }
+  
+//   render() {
+
+//     // let cons=this.state.countryNames.map((val) => <option key={val.Country} value={val.Country}>{val.Country} </option>)
+//     let cons =this.props.getcountry(this.props.country.map((val) => <option key={val.Country} value={val.Country}>{val.Country} </option>))
+//     return (
+//       <div><br/><h1>Select Country:</h1>
+//       {cons}
+//       {/* <select placeholder="select"onChange={(e) => this.ChangeHandler(e)}>
+//         {this.props.getcountry(() =>this.props.country.map((val) => <option key={val.Country} value={val.Country}>{val.Country} </option>))}
+//               </select> */}
+      
+//       {/* {this.state.countryName && <Com1 con={this.state.countryName} toD={this.state.toDate} frD={this.state.fromDate} ></Com1>} */}
+//       </div>  
+//     );
+//   }
+// }
+
+// // const mapDispatchToProps = ({ data = {} }) => ({
+// //   data
+// // });
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     getcountry: con => dispatch(getcountry(con))       
+//   }
+// };
+// export default connect(
+//   null,
+//   mapDispatchToProps,
+//  )(App);
+
+
+
+
+
+
+// import React,{Component} from 'react';
+// import './App.css';
+// import Data from './CountryRedux2/covidData';
+// class App extends Component{
+// render(){
+//   return <div>
+// <Data></Data></div>
+// }
+
+// }
+// export default App;
+
+
+
+//  //Note Project
+// import React, { Component } from 'react';
+// import './App.css';
+// import Notes from './Notes/Notes';
+
+// class App extends Component {
+//   render(){
+//   return <div>
+//    <Notes/> </div>
+  
+// }
+// }
+// export default App;
+
 // import React from 'react';
 // import State1 from 'C:/Users/sandh/Desktop/reactProject2/counter-app/src/Components/usingState.jsx';
 // import { Component } from 'react';
@@ -23,7 +125,8 @@ class App extends Component{
   render(){
     const list=this.state.input.split('').map(
       (ch,index)=>{
-      return (<Char Character={ch} key={index} Clicked={()=>this.onDeleteChar(index)}></Char>);
+      return (<Cha
+        r Character={ch} key={index} Clicked={()=>this.onDeleteChar(index)}></Char>);
     }
       )
   
@@ -87,104 +190,97 @@ export default App;
 
 
 
-import React, { Component } from 'react';
-import './App.css';
-import axios from 'axios';
-import BodyComp from './AxiosProject/BodyComponent';
-import HeaderComp from './AxiosProject/HeaderComponent';
-import './AxiosProject/HeaderComp.css';
-//import Dropdown from './AxiosProject/dummy';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import Dropdown from 'react-bootstrap/Dropdown';
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      Countries: [],
-      Global: {},
-      Country: "",
-      dis: "",
-      value: "",
-      selectedCountry: ""
-    }
-    //  this.onClickHandler = this.onClickHandler.bind(this)
-  }
+// import React, { Component } from 'react';
+// import './App.css';
+// import axios from 'axios';
+// import BodyComp from './AxiosProject/BodyComponent';
+// import HeaderComp from './AxiosProject/HeaderComponent';
+// import './AxiosProject/HeaderComp.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
-  componentDidMount() {
-    axios.get('https://api.covid19api.com/summary')
-      .then((res) => {
-        let con = res.data.Countries;
-        // let country=con.Country;
-        console.log(con);
-        //  console.log(country);
-        this.setState({ Countries: con });
-        // this.setState( {Country:country});
-        let global = res.data.Global;
-        console.log(global);
-        this.setState({ Global: global });
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        console.log("Fanally Block Executed")
-      });
-  }
-  onClickHandler(e) {
-    let selectedCountry = e.target.value;
-    this.setState({
-      selectedCountry
-    })
-    // const Countries=this.state.Countries.map(con1=>{
-    //   return <BodyComp key={con1.Country} Country={con1.Country} code={con1.CountryCode}
-    //   slug={con1.Slug} new={con1.NewConfirmed} newDeaths={con1.NewDeaths} TotalConfirmed={con1.TotalConfirmed}
-    //   NewDeaths={con1.NewDeaths} TotalDeaths={con1.TotalDeaths} NewRecovered={con1.NewRecovered} TotalRecovered={con1.TotalRecovered}
-    //   Date={con1.Date}></BodyComp>
-    //   })
-    //   debugger;
-    // this.setState({Countries:Countries})
-    //return <div>{Countries}</div>
-  }
+// class App extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       Countries: [],
+//       Countries2: "",
+//       Global: {},
+//       selectedCountry: ""
+//     }
+//     }
+
+//   componentDidMount() {
+//     axios.get('https://api.covid19api.com/summary')
+//       .then((res) => {
+//         let con = res.data.Countries;
+//         console.log(con);
+//         this.setState({ Countries: con });
+//        let global = res.data.Global;
+//         console.log(global);
+//         this.setState({ Global: global });
+//       })
+//       .catch((error) => {
+//         console.log(error);
+//       })
+//       .finally(() => {
+//         console.log("Fanally Block Executed")
+//       });
+//   }
+  // onClickHandler(e) {
+  //   let selectedCountry = e.target.value;
+  //   this.setState({
+  //     selectedCountry
+  //   })
+  //   const Countries2=this.state.Countries
+  //   .filter((country) =>country.Country === selectedCountry)
+  //   .map(con1=>{
+  //     return <BodyComp key={con1.Country} Country={con1.Country} code={con1.CountryCode}
+  //     slug={con1.Slug} new={con1.NewConfirmed} newDeaths={con1.NewDeaths} TotalConfirmed={con1.TotalConfirmed}
+  //     NewDeaths={con1.NewDeaths} TotalDeaths={con1.TotalDeaths} NewRecovered={con1.NewRecovered} TotalRecovered={con1.TotalRecovered}
+  //     Date={con1.Date}></BodyComp>
+  //     })
+   
+  //   this.setState({Countries2:Countries2})
+  // }
 
 
-  render() {
+//   render() {
 
-    let global = this.state.Global
-    let GlobalList = Object.keys(global).map((l, k) => {
-      return (
-        <HeaderComp key={k} tit={k} value={l} >{global[l]}</HeaderComp>
-      )
-    })
-    
-    return (
-      <div>
-        {/* <button onClick={this.getCountries}>Getdata</button> */}
-        <h1>Global:</h1><h2>{GlobalList}</h2>
-        <div>
-          <select placeholder="select" onChange={(e) => this.onClickHandler(e)}>
-            {this.state.Countries.map((val) => <option key={val.Country} value={val.Country}>{val.Country}</option>)}
-          </select>
-        </div>
-        {/* <h1>Countries:</h1><h2>{Countries}</h2> */}
-    <div>{this.state.Countries.filter((country) => country.Country == this.state.selectedCountry).map((l) =>(
-      <div>
-        <li>Country - {l.Country}</li>
-        <li>NewConfirmed -{l.NewConfirmed}</li>
-        <li>NewDeaths - {l.NewDeaths}</li>
-        <li>NewRecovered - {l.NewRecovered}</li>
-        <li>TotalConfirmed - {l.TotalConfirmed}</li>
-        <li>TotalDeaths - {l.TotalDeaths}</li>
-        <li>TotalRecovered - {l.TotalRecovered}</li>
-      </div>
-    ))}</div>
-      </div>
-    );
-  }
-}
+//     let global = this.state.Global
+//     let GlobalList = Object.keys(global).map((l, k) => {
+//       return (
+//         <HeaderComp key={k} tit={k} value={l} >{global[l]}</HeaderComp>
+//       )
+//     })
+
+//     return (
+//       <div><h1 style={{color: "grey",textDecorationLine: 'underline'}}>CoronaVirus Updates:</h1>
+//        <h2>Global:</h2><h2>{GlobalList}</h2>
+//         <div ><h2>Select Country:</h2>
+//           <select placeholder="select" className="conStyle" onChange={(e) => this.onClickHandler(e)}>
+//     {this.state.Countries.map((val) => <option className="data" key={val.Country} value={val.Country}>{val.Country} {val.CountryCode}</option>)}
+//           </select>
+//         </div>
+//             {/* <div>{this.state.Countries.filter((country) => country.Country == this.state.selectedCountry).map((l) =>(
+//       <div>
+//         <li>Country - {l.Country}</li>
+//         <li>NewConfirmed -{l.NewConfirmed}</li>
+//         <li>NewDeaths - {l.NewDeaths}</li>
+//         <li>NewRecovered - {l.NewRecovered}</li>
+//         <li>TotalConfirmed - {l.TotalConfirmed}</li>
+//         <li>TotalDeaths - {l.TotalDeaths}</li>
+//         <li>TotalRecovered - {l.TotalRecovered}</li>
+//       </div>
+//     ))}</div> */}
+//      <div>{this.state.Countries2}</div>
+
+//       </div>
+//     );
+//   }
+// }
 
 
-export default App;
+// export default App;
 
 // Country: "Afghanistan"
 // CountryCode: "AF"
@@ -221,3 +317,45 @@ onSelect={Countries}
              //onChange={(e) => this.setState({Country: e.target.value})}
 
 */}
+
+
+
+// state={
+// Countries:[],
+// countryName:'',
+// Country:" ",
+// fromDate:"",
+//     toDate:""
+// componentDidMount(){
+//   axios.get('https://api.covid19api.com/countries')
+//   .then((req)=>{
+// let country=req.data;
+// console.log(country)
+// this.setState({Countries:country})
+// })
+//   .catch((error)=>{
+//     console.log("error")
+//   })
+//   .finally(()=>
+//   console.log("Finally Excuted"));
+// }
+// ChangeHandler=(event)=>{
+//   let country=event.target.value;
+//   console.log("inSide Cahnge Handler")
+//   this.setState({countryName:country})
+//   }
+//  render(){ 
+
+//   return <div><br/><h1>Select Country:</h1>
+//   <select placeholder="select"onChange={(e) => this.ChangeHandler(e)}>
+//     {this.state.Countries.map((val) => <option key={val.Country} value={val.Country}>{val.Country} </option>)}
+//           </select>
+//   {/* <Dropdown options={Country} con={Country} onClick={(event)=>this.ChangeHandler} >{Country}</Dropdown> */}
+//   {this.state.countryName && <Com1 con={this.state.countryName} toD={this.state.toDate} frD={this.state.fromDate} ></Com1>}
+//   </div>
+
+// }  
+//  }
+
+
+
