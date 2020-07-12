@@ -1,12 +1,13 @@
 .countryStyle{
     background-color: rgb(71, 212, 255);
     text-align: center;
-    border: rgb(68, 58, 212);
+    border: rgb(252, 132, 33) solid;
     box-shadow: 0 3px 1px grey;
-    margin: 10px;
+    margin: 20px;
     padding: 0 10px;
     display: grid;
     flex-wrap: wrap;
     justify-content: space-between;
     overflow: hidden;
+    cursor: pointer;
 }

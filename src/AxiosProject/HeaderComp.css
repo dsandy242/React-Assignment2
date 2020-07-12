@@ -10,8 +10,30 @@
     justify-content: space-between;
     overflow: hidden;
     height:100%;
-    width:50%;
+    width:50%;   
 }
 .listStyle{
     border:yellow solid 4px;
+}
+.conStyle{
+    background-color: yellowgreen;
+    border: rgb(212, 58, 212) solid;
+    box-shadow: 0 6px 3px grey;
+    margin-left: 100px;
+    padding: 0 10px;
+    width:50%; 
+    height:100%;
+    cursor: grab;
+}
+.data{
+    background-color: rgb(142, 158, 108);
+    border: grey;
+    border: rgb(22, 2, 22);
+    box-shadow: 0 6px 3px rgb(90, 68, 68);
+    margin-left: 100px;
+    padding: 0 10px;
+    width:50%; 
+    height:100%;
+    margin: 20px;
+
 }
